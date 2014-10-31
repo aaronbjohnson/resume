@@ -55,7 +55,7 @@ bio.display = function () {
 	}
 	var formattedBioPic = HTMLbioPic.replace("%data%", bio.bioPic);
 	$("#header").prepend(formattedBioPic);
-};
+}
 
 var work = {
 	"jobs": [
@@ -244,13 +244,7 @@ education.display = function() {
 	$(".online-entry:last").append(formattedonlineDates);
 	var formattedonlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[3].url);
 	$(".online-entry:last").append(formattedonlineURL);
-};
-
-
-
-
-
-
+}
 
 $(document).click(function(loc) {
 	var x = loc.pageX;
@@ -275,7 +269,7 @@ function inName() {
 	name_var[1] = name_var[1].toUpperCase();
 
 	return name_var[0] + " " + name_var[1];
-};
+}
 
 inName(name);
 
@@ -289,6 +283,7 @@ $("#mapDiv").append(googleMap);
 $("#main").append(internationalizeButton);
 
 $("#header").prepend(formattedRole);
+
 $("#header").prepend(formattedName);
 
 
