@@ -8,8 +8,8 @@ var bio = {
 	"name": "Aaron Johnson",
 	"role": "Web Developer",
 	"contacts": {
-		"mobile": "718-541-6751",
-		"email": "aj65461@gmail.com",
+		"mobile": "718-555-5555",
+		"email": "email@gmail.com",
 		"github": "aj65461",
 		"twitter": "@WhereTrumpAt",
 		"location": "Jonesville, NC"
