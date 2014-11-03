@@ -177,7 +177,7 @@ education.display = function() {
 
 	$("#education").append(HTMLschoolStart);
 
-	var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools[0].name | "#", education.schools[0].url);
+	var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools[0].name);
 
 	var formattedSchoolDegree = HTMLschoolDegree.replace("%data%", education.schools[0].degree);
 
