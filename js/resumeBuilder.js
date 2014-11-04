@@ -177,7 +177,7 @@ education.display = function() {
 
 	$("#education").append(HTMLschoolStart);
 
-	var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools[0].name);
+	var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools[0].name).replace('#', education.schools[0].url);
 
 	var formattedSchoolDegree = HTMLschoolDegree.replace("%data%", education.schools[0].degree);
 
@@ -209,7 +209,8 @@ education.display = function() {
 
 	var formattedonlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[0].dates);
 	$(".online-entry:last").append(formattedonlineDates);
-	var formattedonlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[0].url);
+
+	var formattedonlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[0].url).replace('#', education.onlineCourses[0].url);
 	$(".online-entry:last").append(formattedonlineURL);
 
 	var formattedonlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[1].title);
@@ -220,7 +221,8 @@ education.display = function() {
 
 	var formattedonlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[1].dates);
 	$(".online-entry:last").append(formattedonlineDates);
-	var formattedonlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[1].url);
+
+	var formattedonlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[1].url).replace('#', education.onlineCourses[1].url);
 	$(".online-entry:last").append(formattedonlineURL);
 
 	var formattedonlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[2].title);
@@ -231,7 +233,8 @@ education.display = function() {
 
 	var formattedonlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[2].dates);
 	$(".online-entry:last").append(formattedonlineDates);
-	var formattedonlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[2].url);
+
+	var formattedonlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[2].url).replace('#', education.onlineCourses[2].url);
 	$(".online-entry:last").append(formattedonlineURL);
 
 	var formattedonlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[3].title);
@@ -242,7 +245,8 @@ education.display = function() {
 
 	var formattedonlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[3].dates);
 	$(".online-entry:last").append(formattedonlineDates);
-	var formattedonlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[3].url);
+
+	var formattedonlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[3].url).replace('#', education.onlineCourses[3].url);
 	$(".online-entry:last").append(formattedonlineURL);
 }
 
