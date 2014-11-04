@@ -64,7 +64,8 @@ var work = {
 			"title" : "Partner, Drafting Manager",
 			"location" : "Brooklyn, NY",
 			"dates" : "October 2013 - Present",
-			"description" : "Coordinated with clients to provide patent applicants with the necessary illustrations to show design and functionality of intellectual property."
+			"description" : "Coordinated with clients to provide patent applicants with the necessary illustrations to show design and functionality of intellectual property.",
+      "url" : "http://www.patentillustrationstudios.com/"
 		},
 		{
 			"employer" : "Global Patent Graphics",
@@ -72,7 +73,6 @@ var work = {
 			"location" : "Charlotte, NC",
 			"dates" : "December 2008 - October 2013",
 			"description" : "Coordinated with clients to provide patent applicants with the necessary illustrations to show design and functionality of intellectual property."
-
 		}
 	]
 }
@@ -82,7 +82,7 @@ work.display = function () {
 
 		$("#workExperience").append(HTMLworkStart);
 
-		var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+		var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer).replace('#', work.jobs[job].url);
 		var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
 		var formattedEmployerTitle = formattedEmployer + formattedTitle;
 		$(".work-entry:last").append(formattedEmployerTitle);
