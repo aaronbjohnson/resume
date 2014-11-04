@@ -101,9 +101,10 @@ work.display = function () {
 var projects = {
 	"projects": [
 		{
-			"title": "HTML and CSS Portfolio",
-			"dates": "2014",
+			"title" : "HTML and CSS Portfolio",
+			"dates" : "2014",
 			"description": "Made a Portfolio",
+      "url" : "http://aj65461.github.io/portfolio/",
 			"images": [
 				"images/me.jpg",
 				"images/me.jpg"
@@ -116,7 +117,7 @@ projects.display = function() {
 	for (project in projects.projects) {
 		$("#projects").append(HTMLprojectStart);
 
-		var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
+		var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title).replace('#', projects.projects[project].url);
 		$(".project-entry:last").append(formattedTitle);
 
 		var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
