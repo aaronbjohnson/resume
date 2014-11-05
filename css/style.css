@@ -74,10 +74,11 @@ p {
 }
 
 a {
-  color: #1199C3;
+  color: #000000;
   text-decoration: none;
   margin-top: 10px;
   display: block;
+  font-weight: bold;
 }
 
 .welcome-message {
@@ -131,6 +132,12 @@ a {
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 10px;
+}
+
+/*Added this to allow control over url color*/
+#onlineUrl {
+  font-weight: lighter;
+  font-size: small;
 }
 
 .center-content {
