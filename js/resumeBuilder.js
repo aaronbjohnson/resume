@@ -106,8 +106,7 @@ var projects = {
 			"description": "Made a Portfolio",
       "url" : "http://aj65461.github.io/portfolio",
 			"images": [
-				"images/folio.jpg",
-				"images/me.jpg"
+				"images/folio.jpg"
 			]
 		}
 	]
