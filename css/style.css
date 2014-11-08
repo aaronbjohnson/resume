@@ -38,7 +38,7 @@ h3 {
 h4 {
   font-style: bold;
   font-size: 14px;
-  color: #4A4A4A;
+  color: #4D4946;
   line-height: 17px;
 }
 
@@ -117,12 +117,12 @@ a {
 }
 
 .dark-gray {
-  background-color: #4A4A4A;
+  background-color: #4D4946;
 }
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: #4D4946;
 }
 
 .flex-box {
@@ -162,7 +162,7 @@ img {
 /* Bar chart stuff */
 .chart div {
   font: 10px sans-serif;
-  background-color: #4A4A4A;
+  background-color: #4D4946;
   text-align: right;
   padding: 3px;
   margin: 1px;
