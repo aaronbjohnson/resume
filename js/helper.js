@@ -118,157 +118,111 @@ function initializeMap() {
     Map created by James Wells (http://www.propia.co.uk/)
     */
     styles: [
-      {
-        "featureType": "landscape",
+    {
         "stylers": [
-          {
-            "visibility": "simplified"
-          },
-          {
-            "color": "#2b3f57"
-          },
-          {
-            "weight": 0.1
-          }
+            {
+                "visibility": "on"
+            },
+            {
+                "saturation": -100
+            },
+            {
+                "gamma": 0.54
+            }
         ]
-      },
-      {
-        "featureType": "administrative",
+    },
+    {
+        "featureType": "road",
+        "elementType": "labels.icon",
         "stylers": [
-          {
-            "visibility": "on"
-          },
-          {
-            "hue": "#ff0000"
-          },
-          {
-            "weight": 0.4
-          },
-          {
-            "color": "#ffffff"
-          }
+            {
+                "visibility": "off"
+            }
         ]
-      },
-      {
-        "featureType": "road.highway",
-        "elementType": "labels.text",
-        "stylers": [
-          {
-            "weight": 1.3
-          },
-          {
-            "color": "#FFFFFF"
-          }
-        ]
-      },
-      {
-        "featureType": "road.highway",
-        "elementType": "geometry",
-        "stylers": [
-          {
-            "color": "#f55f77"
-          },
-          {
-            "weight": 3
-          }
-        ]
-      },
-      {
-        "featureType": "road.arterial",
-        "elementType": "geometry",
-        "stylers": [
-          {
-            "color": "#f55f77"
-          },
-          {
-            "weight": 1.1
-          }
-        ]
-      },
-      {
-        "featureType": "road.local",
-        "elementType": "geometry",
-        "stylers": [
-          {
-            "color": "#f55f77"
-          },
-          {
-            "weight": 0.4
-          }
-        ]
-      },
-      {},
-      {
-        "featureType": "road.highway",
-        "elementType": "labels",
-        "stylers": [
-          {
-            "weight": 0.8
-          },
-          {
-            "color": "#ffffff"
-          },
-          {
-            "visibility": "on"
-          }
-        ]
-      },
-      {
-        "featureType": "road.local",
-        "elementType": "labels",
-        "stylers": [
-          {
-            "visibility": "off"
-          }
-        ]
-      },
-      {
-        "featureType": "road.arterial",
-        "elementType": "labels",
-        "stylers": [
-          {
-            "color": "#ffffff"
-          },
-          {
-            "weight": 0.7
-          }
-        ]
-      },
-      {
-        "featureType": "poi",
-        "elementType": "labels",
-        "stylers": [
-          {
-            "visibility": "off"
-          }
-        ]
-      },
-      {
-        "featureType": "poi",
-        "stylers": [
-          {
-            "color": "#6c5b7b"
-          }
-        ]
-      },
-      {
+    },
+    {
         "featureType": "water",
         "stylers": [
-          {
-            "color": "#f3b191"
-          }
+            {
+                "color": "#4d4946"
+            }
         ]
-      },
-      {
-        "featureType": "transit.line",
+    },
+    {
+        "featureType": "poi",
+        "elementType": "labels.icon",
         "stylers": [
-          {
-              "visibility": "on"
-          }
+            {
+                "visibility": "off"
+            }
         ]
-      }
-    ]
-  };
+    },
+    {
+        "featureType": "poi",
+        "elementType": "labels.text",
+        "stylers": [
+            {
+                "visibility": "simplified"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#ffffff"
+            }
+        ]
+    },
+    {
+        "featureType": "road.local",
+        "elementType": "labels.text",
+        "stylers": [
+            {
+                "visibility": "simplified"
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "labels.text.fill",
+        "stylers": [
+            {
+                "color": "#ffffff"
+            }
+        ]
+    },
+    {
+        "featureType": "transit.line",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "gamma": 0.48
+            }
+        ]
+    },
+    {
+        "featureType": "transit.station",
+        "elementType": "labels.icon",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "gamma": 7.18
+            }
+        ]
+    }
+]
+  
+};
 
   // This next line makes `map` a new Google Map JavaScript Object and attaches it to
   // <div id="map">, which is appended as part of an exercise late in the course.
