@@ -103,7 +103,7 @@ var projects = {
 		{
 			"title" : "HTML and CSS Portfolio",
 			"dates" : "2014",
-			"description": "Made a Portfolio",
+			"description": "This was my first project in the Udacity Front-End Web Development nanodegree. The requirement was to develop a responsive website based on a mockup that would display images, descriptions and links to projects I would be completing during the course of the degree.",
       "url" : "http://aj65461.github.io/portfolio",
 			"images": [
 				"images/folio.jpg"
@@ -171,7 +171,7 @@ var education = {
 			"url": "https://www.udacity.com/course/ud804"
 		}
 	],
-  
+
   display : function() {
 
     $("#education").append(HTMLschoolStart);
