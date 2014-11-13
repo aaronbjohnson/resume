@@ -15,7 +15,7 @@
 
 h1 {
   font-size: 40px;
-  color: #F5A623;
+  color: #000000;
   line-height: 48px;
   display: inline;
 }
@@ -51,6 +51,16 @@ h5 {
   padding-right: 5%;
 }
 
+/* Add part of an hr style from Glyph, by Harry Roberts */
+    
+hr {
+    padding: 0;
+    border: none;
+    border-top: medium double #333;
+    color: #333;
+    text-align: center;
+}
+
 .date-text {
   font-style: italic;
   font-size: 14px;
@@ -84,12 +94,12 @@ a {
 .welcome-message {
   font-style: italic;
   font-size: 18px;
-  color: #F3F3F3;
+  color: #000000;
   line-height: 28px;
 }
 
 #skillsH3 {
-  color: #F5AE23;
+  color: #000000;
   display: none;
 }
 
@@ -98,16 +108,21 @@ a {
 }
 
 .orange {
-  background-color: #F5AE23;
+  background: url("../images/headerbackground.jpg"); 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: #000000;
 }
 
-.orange-text {
-  color: #F5AE23;
+.black-text {
+  color: #000000;
 }
 
 .white-text {
   font-weight: bold;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .gray {
@@ -116,13 +131,13 @@ a {
   clear:both;
 }
 
-.dark-gray {
-  background-color: #4D4946;
-}
-
-/* TODO: Replace with image later */
+/* Add background image to header*/
 #header {
-  background-color: #4D4946;
+  background: url("../images/headerbackground.jpg"); 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .flex-box {
@@ -221,5 +236,14 @@ span {
   #skills,
   .biopic {
     display: block;
+  }
+}
+/*Added this to make role move to new line when screen size is reduced.*/
+@media only screen and (max-width: 428px) {
+  #name,
+  #role {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
