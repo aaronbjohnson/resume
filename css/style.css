@@ -1,6 +1,4 @@
-*{
-    padding:0;
-    margin:0;
+* {
     font-family: 'Roboto', sans-serif;
 }
 
@@ -21,7 +19,7 @@ h1 {
 }
 
 h2 {
-  font-style: bold;
+  font-weight: bold;
   font-size: 24px;
   color: #999999;
   line-height: 29px;
@@ -36,9 +34,9 @@ h3 {
 }
 
 h4 {
-  font-style: bold;
+  font-weight: bold;
   font-size: 14px;
-  color: #4D4946;
+  color: #4d4946;
   line-height: 17px;
 }
 
@@ -52,13 +50,11 @@ h5 {
 }
 
 /* Add part of an hr style from Glyph, by Harry Roberts */
-    
 hr {
-    padding: 0;
-    border: none;
-    border-top: medium double #333;
-    color: #333;
-    text-align: center;
+  border: none;
+  border-top: medium double #333;
+  color: #333;
+  text-align: center;
 }
 
 .date-text {
@@ -101,14 +97,16 @@ a {
 #skillsH3 {
   color: #000000;
   display: none;
+  margin-bottom: 1px;
 }
 
 #skills {
   display: none;
+  margin-top: 1px;
 }
 
 .orange {
-  background: url("../images/headerbackground.jpg"); 
+  background: url('../images/headerbackground.jpg'); 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -131,14 +129,14 @@ a {
 }
 
 .gray {
-  background-color: #F3F3F3;
+  background-color: #f3f3f3;
   padding-bottom: 10px;
-  clear:both;
+  clear: both;
 }
 
 /* Add background image to header*/
 #header {
-  background: url("../images/headerbackground.jpg"); 
+  background: url('../images/headerbackground.jpg'); 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -170,7 +168,7 @@ ul {
 
 .biopic {
   float: left;
-  padding: 10px;
+  padding: 10px 10px 40px 10px;
   width: 200px;
   display: none;
 }
@@ -182,7 +180,7 @@ img {
 /* Bar chart stuff */
 .chart div {
   font: 10px sans-serif;
-  background-color: #4D4946;
+  background-color: #4d4946;
   text-align: right;
   padding: 3px;
   margin: 1px;
@@ -200,27 +198,35 @@ span {
 }
 
 @media only screen and (max-width: 1024px) {
+
   #letsConnect {
     margin-top: 5%;
   }
+
 }
 
 @media only screen and (max-width:900px) {
+
   .biopic {
     width: 175px;
   }
+
 }
 
 @media only screen and (max-width: 750px) {
+
   #letsConnect {
     margin-top: 10%;
   }
+
   .biopic {
     width: 150px;
   }
+
   .welcome-message {
     display: none;
   }
+
 }
 
 #map {
@@ -237,18 +243,22 @@ span {
 }
 
 @media only screen and (min-width: 750px) {
+
   #skillsH3,
   #skills,
   .biopic {
     display: block;
   }
+
 }
 /*Added this to make role move to new line when screen size is reduced.*/
 @media only screen and (max-width: 428px) {
+
   #name,
   #role {
     display: block;
     margin-left: auto;
     margin-right: auto;
   }
+
 }
