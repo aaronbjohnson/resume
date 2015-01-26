@@ -6,7 +6,7 @@ var bio = {
 		"email": "email@gmail.com",
 		"github": "aj65461",
 		"twitter": "@WhereTrumpAt",
-		"location": "Brooklyn, NY"
+		"location": "Jonesville, NC"
 	},
 	"welcomeMessage": "Welcome to my resume!",
 	"skills": [
