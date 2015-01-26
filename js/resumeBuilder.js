@@ -98,7 +98,25 @@ var projects = {
 			"images": [
 				"images/folio.jpg"
 			]
-		}
+		},
+    {
+      "title" : "Interactive Resume",
+      "dates" : "2014",
+      "description": "This was my second project in the Udacity Front-End Web Development nanodegree. Here I developed an interactive resume application that would read resume content from a JSON file and would dynamically display that content within a provided template. I made use of objects, functions, conditionals, and control structures to compose the content that would display on the resume.",
+      "url" : "http://aj65461.github.io/resume",
+      "images": [
+        "images/resume.jpg"
+      ]
+    },
+    {
+      "title" : "Classic Arcade Game",
+      "dates" : "2015",
+      "description": "This was my third project in the Udacity Front-End Web Development nanodegree. Using the provided visual assets and game loop engine I added a number of entities to the game including the player characters and enemies to recreate the classic arcade game Frogger.",
+      "url" : "http://aj65461.github.io/frontend-nanodegree-arcade-game/",
+      "images": [
+        "images/arcade.jpg"
+      ]
+    }
 	],
 
   display : function() {
