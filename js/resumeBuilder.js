@@ -2,8 +2,8 @@ var bio = {
 	"name": "Aaron Johnson",
 	"role": "Web Developer",
 	"contacts": {
-		"mobile": "718-555-5555",
-		"email": "email@gmail.com",
+		//"mobile": "718-555-5555",
+		"email": "aj65461@gmail.com",
 		"github": "aj65461",
 		"twitter": "@WhereTrumpAt",
 		"location": "Jonesville, NC"
@@ -17,8 +17,8 @@ var bio = {
   display : function () {
     var formattedName = HTMLheaderName.replace("%data%", bio.name);
     var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-    var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
-    $("#topContacts").append(formattedMobile);
+    //var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
+    //$("#topContacts").append(formattedMobile);
     var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
     $("#topContacts").append(formattedEmail);
     var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
@@ -30,7 +30,7 @@ var bio = {
     var formattedWelcomeMessage = HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
     $("#header").append(formattedWelcomeMessage);
 //Adding the footer contacts
-    $("#footerContacts").append(formattedMobile);
+    //$("#footerContacts").append(formattedMobile);
     $("#footerContacts").append(formattedEmail);
     $("#footerContacts").append(formattedGithub);
     $("#footerContacts").append(formattedTwitter);
@@ -218,14 +218,6 @@ $(document).click(function(loc) {
 	logClicks(x,y);
 });
 
-/*function inName(name) {
-	name = name.trim().split(" ");
-	console.log(name);
-	name[1] = name[1].toUpperCase();
-	name[0] = name[0].slice(0,1).toUpperCase() + name[0].slice(1).toLowerCase();
-
-	return name[0] +" " + name[1];
-};*/
 
 function inName() {
 
