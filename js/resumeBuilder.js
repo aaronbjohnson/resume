@@ -57,7 +57,7 @@ var work = {
 		{
 			"employer" : "Patent Illustration Studios",
 			"title" : "Partner, Drafting Manager",
-			"location" : "Brooklyn, NY",
+			"location" : "Jonesville, NC",
 			"dates" : "October 2013 - Present",
 			"description" : "Coordinated with clients to provide patent applicants with the necessary illustrations to show design and functionality of intellectual property.",
       "url" : "http://www.patentillustrationstudios.com/"
@@ -93,7 +93,7 @@ var projects = {
 		{
 			"title" : "HTML and CSS Portfolio",
 			"dates" : "2014",
-			"description": "This was my first project in the Udacity Front-End Web Development nanodegree. The requirement was to develop a responsive website based on a mockup that would display images, descriptions and links to projects I would be completing during the course of the degree.",
+			"description": "This was my first project in the Udacity Front-End Web Development Nanodegree. The requirement was to develop a responsive website based on a mockup that would display images, descriptions and links to projects I would be completing during the course of the degree.",
       "url" : "http://aj65461.github.io/portfolio",
 			"images": [
 				"images/folio.jpg"
@@ -102,7 +102,7 @@ var projects = {
     {
       "title" : "Interactive Resume",
       "dates" : "2014",
-      "description": "This was my second project in the Udacity Front-End Web Development nanodegree. Here I developed an interactive resume application that would read resume content from a JSON file and would dynamically display that content within a provided template. I made use of objects, functions, conditionals, and control structures to compose the content that would display on the resume.",
+      "description": "This was my second project in the Udacity Front-End Web Development Nanodegree. Here I developed an interactive resume application that would read resume content from a JSON file and would dynamically display that content within a provided template. I made use of objects, functions, conditionals, and control structures to compose the content that would display on the resume.",
       "url" : "http://aj65461.github.io/resume",
       "images": [
         "images/resume.jpg"
@@ -111,7 +111,7 @@ var projects = {
     {
       "title" : "Classic Arcade Game",
       "dates" : "2015",
-      "description": "This was my third project in the Udacity Front-End Web Development nanodegree. Using the provided visual assets and game loop engine I added a number of entities to the game including the player characters and enemies to recreate the classic arcade game Frogger.",
+      "description": "This was my third project in the Udacity Front-End Web Development Nanodegree. Using the provided game loop engine and my own visual assets, I added a number of entities to the game including the player character, lasers, and health pack to recreate a classic Frogger-style game.",
       "url" : "http://aj65461.github.io/frontend-nanodegree-arcade-game/",
       "images": [
         "images/arcade.jpg"
