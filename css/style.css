@@ -253,7 +253,6 @@ span {
 }
 /*Added this to make role move to new line when screen size is reduced.*/
 @media only screen and (max-width: 444px) {
-
   #name,
   #role {
     display: block;
@@ -261,7 +260,6 @@ span {
     margin-right: auto;
     text-align: center;
   }
-
 }
 /*Added this to fix map overlapping the 'Let's Connect' row*/
 @media only screen and (max-width: 560px) {
@@ -273,5 +271,5 @@ span {
   .projectpic {
     max-width: 100%;
   }
-  
 }
+
