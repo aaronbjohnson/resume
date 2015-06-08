@@ -22,6 +22,7 @@ var HTMLtwitter = "<li class='flex-item'><img src='images/bird.png ' alt='twitte
 var HTMLgithub = "<li class='flex-item'><img src='images/Git.png ' alt='github-icon' class='socialLogo'></img><span class='black-text'>%data%</span></li>";
 var HTMLblog = "<li class='flex-item'><span class='bold-text'>blog</span><span class='black-text'>%data%</span></li>";
 var HTMLlocation = "<li class='flex-item'><span class='glyphicon glyphicon-map-marker ' aria-hidden='true'></span><span class='black-text'>%data%</span></li>";
+var HTMLlinkedin = "<li class='flex-item'><img src='images/linked.png ' alt='linkedin-logo' class='socialLogo'></img><span class='black-text'>%data%</span></li>";
 
 var HTMLbioPic = "<img src='%data%' class='biopic'>";
 var HTMLWelcomeMsg = "<span class='welcome-message'>%data%</span>";

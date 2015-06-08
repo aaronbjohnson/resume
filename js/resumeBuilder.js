@@ -1,11 +1,12 @@
 var bio = {
 	"name": "Aaron Johnson",
-	"role": "Web Developer",
+	"role": "WEB DEVELOPER",
 	"contacts": {
 		//"mobile": "718-555-5555",
 		"email": "aj65461@gmail.com",
 		"github": "aj65461",
-		"twitter": "@WhereTrumpAt",
+		/*"twitter": "@WhereTrumpAt",*/
+        "linkedin": "abrittjohnson",
 		"location": "Jonesville, NC"
 	},
 	"welcomeMessage": "Welcome to my resume!",
@@ -23,8 +24,10 @@ var bio = {
     $("#topContacts").append(formattedEmail);
     var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
     $("#topContacts").append(formattedGithub);
-    var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
-    $("#topContacts").append(formattedTwitter);
+    //var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
+    //$("#topContacts").append(formattedTwitter);
+    var formattedLinkedin = HTMLlinkedin.replace("%data%", bio.contacts.linkedin);
+    $("#topContacts").append(formattedLinkedin);
     var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
     $("#topContacts").append(formattedLocation);
     var formattedWelcomeMessage = HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
@@ -33,7 +36,8 @@ var bio = {
     //$("#footerContacts").append(formattedMobile);
     $("#footerContacts").append(formattedEmail);
     $("#footerContacts").append(formattedGithub);
-    $("#footerContacts").append(formattedTwitter);
+    $("#footerContacts").append(formattedLinkedin);
+    //$("#footerContacts").append(formattedTwitter);
     if (bio.skills.length > 0) {
       $("#header").append(HTMLskillsStart);
       var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
