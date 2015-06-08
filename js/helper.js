@@ -12,16 +12,16 @@ Cameron Pittman
 These are HTML strings. As part of the course, you'll be using JavaScript functions
 replace the %data% placeholder text you see in them.
 */
-var HTMLheaderName = "<h1 id='name'>%data%</h1>";
-var HTMLheaderRole = "<span id='role'>%data%</span><hr/>";
+var HTMLheaderName = "<div class='col-xs-12 col-md-8'><h1 id='name'>%data%</h1></div>";
+var HTMLheaderRole = "<div class='col-xs-12 col-md-4'<span id='role'>%data%</span><hr/></div>";
 
 var HTMLcontactGeneric = "<li class='flex-item'><span class='black-text'>%contact%</span><span class='black-text'>%data%</span></li>";
 var HTMLmobile = "<li class='flex-item'><span class='bold-text'>mobile</span><span class='black-text'>%data%</span></li>";
-var HTMLemail = "<li class='flex-item'><span class='bold-text'>email</span><span class='black-text'>%data%</span></li>";
-var HTMLtwitter = "<li class='flex-item'><span class='bold-text'>twitter</span><span class='black-text'>%data%</span></li>";
-var HTMLgithub = "<li class='flex-item'><span class='bold-text'>github</span><span class='black-text'>%data%</span></li>";
+var HTMLemail = "<li class='flex-item'><span class='glyphicon glyphicon-envelope ' aria-hidden='true'></span><span class='black-text'>%data%</span></li>";
+var HTMLtwitter = "<li class='flex-item'><img src='images/bird.png ' alt='twitter-logo' class='socialLogo'></img><span class='black-text'>%data%</span></li>";
+var HTMLgithub = "<li class='flex-item'><img src='images/Git.png ' alt='github-icon' class='socialLogo'></img><span class='black-text'>%data%</span></li>";
 var HTMLblog = "<li class='flex-item'><span class='bold-text'>blog</span><span class='black-text'>%data%</span></li>";
-var HTMLlocation = "<li class='flex-item'><span class='bold-text'>location</span><span class='black-text'>%data%</span></li>";
+var HTMLlocation = "<li class='flex-item'><span class='glyphicon glyphicon-map-marker ' aria-hidden='true'></span><span class='black-text'>%data%</span></li>";
 
 var HTMLbioPic = "<img src='%data%' class='biopic'>";
 var HTMLWelcomeMsg = "<span class='welcome-message'>%data%</span>";

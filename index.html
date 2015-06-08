@@ -15,8 +15,10 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
 <scripts> for JavaScript files to build interactions.
 -->
 <head>
-  <link href="css/style.css" rel="stylesheet" type="text/css"></link>
-  <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css"></link>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.icon-large.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
 
   <!--
   jQuery is a common JavaScript library for reading and making changes to the
@@ -45,33 +47,55 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   <meta name="viewport" content="width=device-width">
 </head>
 <body unresolved>
-  <div id="main">
+    <div class="container">
+        <div id="main">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div id="header" class="center-content">
+                        <ul id="topContacts" class="flex-box"></ul>
+                    </div>
+                </div>
+            </div>
 
-    <div id="header" class="center-content">
-      <ul id="topContacts" class="flex-box"></ul>
+
+
+            <div style="clear: both;"></div>
+
+            <div id="workExperience" class="gray">
+                <h2>Work Experience</h2>
+            </div>
+
+            <div id="projects">
+                <h2>Projects</h2>
+            </div>
+
+            <div id="education" class="gray">
+                <h2>Education</h2>
+            </div>
+
+            <div id="skillsChart">
+                <h2>Skills Chart</h2>
+            </div>
+
+            <div id="mapDiv">
+                <h2>Where I've Lived and Worked</h2>
+            </div>
+
+            <div id="letsConnect" class="dark-gray">
+                <h2 class="orange center-text">Let's Connect</h2>
+                <ul id="footerContacts" class="flex-box">
+                </ul>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p>Glyphs provided by glyphicons.com</p>
+                </div>
+            </div>
+        </div>
+
     </div>
-    <div style="clear: both;"></div>
-    <div id="workExperience" class="gray">
-      <h2>Work Experience</h2>
-    </div>
-    <div id="projects">
-      <h2>Projects</h2>
-    </div>
-    <div id="education" class="gray">
-      <h2>Education</h2>
-    </div>
-    <div id="skillsChart">
-      <h2>Skills Chart</h2>
-    </div>
-    <div id="mapDiv">
-      <h2>Where I've Lived and Worked</h2>
-    </div>
-    <div id="letsConnect" class="dark-gray">
-      <h2 class="orange center-text">Let's Connect</h2>
-      <ul id="footerContacts" class="flex-box">
-      </ul>
-    </div>
-  </div>
+
+
 
   <script src="js/resumeBuilder.js"></script>
 
