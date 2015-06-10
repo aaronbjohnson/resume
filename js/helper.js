@@ -42,6 +42,8 @@ var HTMLprojectTitle = "<a href='#'>%data%</a>";
 var HTMLprojectDates = "<div class='date-text'>%data%</div>";
 var HTMLprojectDescription = "<p><br>%data%</p>";
 var HTMLprojectImage = "<img src='%data%' class='projectpic'>";
+var HTMLprojectCode ="<form class='btn' action='%data%'><input type='submit' value='Code'></form>";
+var HTMLprojectDemo ="<form class='btn' action='%data%'><input type='submit' value='Demo'></form>";
 
 var HTMLschoolStart = "<div class='education-entry'></div>";
 var HTMLschoolName = "<a href='#'>%data%";

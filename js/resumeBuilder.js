@@ -1,19 +1,19 @@
 var bio = {
-	"name": "Aaron Johnson",
-	"role": "WEB DEVELOPER",
-	"contacts": {
-		//"mobile": "718-555-5555",
-		"email": "aj65461@gmail.com",
-		"github": "aj65461",
-		/*"twitter": "@WhereTrumpAt",*/
+    "name": "Aaron Johnson",
+    "role": "WEB DEVELOPER",
+    "contacts": {
+        //"mobile": "718-555-5555",
+        "email": "aj65461@gmail.com",
+        "github": "aj65461",
+        /*"twitter": "@WhereTrumpAt",*/
         "linkedin": "abrittjohnson",
-		"location": "Jonesville, NC"
-	},
-	"welcomeMessage": "Welcome to my resume!",
-	"skills": [
-		"HTML", "CSS", "JavaScript", "Python"
-	],
-	"bioPic": "images/me.jpg",
+        "location": "Jonesville, NC"
+    },
+    "welcomeMessage": "Welcome to my resume!",
+    "skills": [
+        "HTML", "CSS", "JavaScript", "Python"
+    ],
+    "bioPic": "images/me.jpg",
 
   display : function () {
     var formattedName = HTMLheaderName.replace("%data%", bio.name);
@@ -57,26 +57,26 @@ var bio = {
 };
 
 var work = {
-	"jobs": [
-		{
-			"employer" : "Patent Illustration Studios",
-			"title" : "Partner, Drafting Manager",
-			"location" : "Jonesville, NC",
-			"dates" : "October 2013 - Present",
-			"description" : "Coordinated with clients to provide patent applicants with the necessary illustrations to show design and functionality of intellectual property.",
+    "jobs": [
+        {
+            "employer" : "Patent Illustration Studios",
+            "title" : "Partner, Drafting Manager",
+            "location" : "Jonesville, NC",
+            "dates" : "October 2013 - Present",
+            "description" : "Coordinated with clients to provide patent applicants with the necessary illustrations to show design and functionality of intellectual property.",
       "url" : "http://www.patentillustrationstudios.com/"
-		},
-		{
-			"employer" : "Global Patent Graphics",
-			"title" : "Illustrator",
-			"location" : "Charlotte, NC",
-			"dates" : "December 2008 - October 2013",
-			"description" : "Coordinated with clients to provide patent applicants with the necessary illustrations to show design and functionality of intellectual property."
-		}
-	],
+        },
+        {
+            "employer" : "Global Patent Graphics",
+            "title" : "Illustrator",
+            "location" : "Charlotte, NC",
+            "dates" : "December 2008 - October 2013",
+            "description" : "Coordinated with clients to provide patent applicants with the necessary illustrations to show design and functionality of intellectual property."
+        }
+    ],
 
   display : function () {
-    for (job in work.jobs) {
+    for (var job in work.jobs) {
       $("#workExperience").append(HTMLworkStart);
       var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer).replace('#', work.jobs[job].url);
       var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
@@ -93,16 +93,20 @@ var work = {
 };
 
 var projects = {
-	"projects": [
-		{
-			"title" : "HTML and CSS Portfolio",
-			"dates" : "2014",
-			"description": "This was my first project in the Udacity Front-End Web Development Nanodegree. The requirement was to develop a responsive website based on a mockup that would display images, descriptions and links to projects I would be completing during the course of the degree.",
+    "projects": [
+        {
+            "title" : "HTML and CSS Portfolio",
+            "dates" : "2014",
+            "description": "This was my first project in the Udacity Front-End Web Development Nanodegree. The requirement was to develop a responsive website based on a mockup that would display images, descriptions and links to projects I would be completing during the course of the degree.",
             "url" : "http://aj65461.github.io/portfolio",
-			"images": [
-				"images/folio.jpg"
-			]
-		},
+            "links": [
+                "https://github.com/aj65461/portfolio",
+                "http://aj65461.github.io/portfolio"
+            ],
+            "images": [
+                "images/folio.jpg"
+            ]
+        },
         {
             "title" : "Interactive Resume",
             "dates" : "2014",
@@ -121,10 +125,10 @@ var projects = {
             "images/arcade.jpg"
             ]
         }
-	],
+    ],
 
   display : function() {
-    for (project in projects.projects) {
+    for (var project in projects.projects) {
       $("#projects").append(HTMLprojectStart);
       var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title).replace('#', projects.projects[project].url);
       $(".project-entry:last").append(formattedTitle);
@@ -132,8 +136,13 @@ var projects = {
       $(".project-entry:last").append(formattedDates);
       var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
       $(".project-entry:last").append(formattedDescription);
+
+      // Adding the buttons...
+      var formattedCode = HTMLprojectCode.replace("%data%", projects.projects[project].links[0]);
+      $(".project-entry:last").append(formattedCode);
+
       if (projects.projects[project].images.length > 0) {
-        for (image in projects.projects[project].images) {
+        for (var image in projects.projects[project].images) {
           var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
           $(".project-entry:last").append(formattedImage);
         }
@@ -143,42 +152,42 @@ var projects = {
 };
 
 var education = {
-	"schools": [
-		{
-			"name" : "Appalachian State University",
-			"location" : "Boone, NC",
-			"degree" : "BS",
-			"majors" : ["Business Administration, Economics"],
-			"dates" : "August 2004 - May 2008",
-			"url": "http://www.appstate.edu/"
-		}
-	],
-	"onlineCourses": [
-		{
-			"title": "Front-End Web Development Nanodegree",
-			"school": "Udacity",
-			"dates": 2014,
-			"url": "https://www.udacity.com/course/nd001"
-		},
-		{
-			"title": "Intro to Computer Science",
-			"school": "Udacity",
-			"dates": 2014,
-			"url": "https://www.udacity.com/course/cs101"
-		},
-		{
-			"title": "Intro to HTML and CSS",
-			"school": "Udacity",
-			"dates": 2014,
-			"url": "https://www.udacity.com/course/ud304"
-		},
-		{
-			"title": "JavaScript Basics",
-			"school": "Udacity",
-			"dates": 2014,
-			"url": "https://www.udacity.com/course/ud804"
-		}
-	],
+    "schools": [
+        {
+            "name" : "Appalachian State University",
+            "location" : "Boone, NC",
+            "degree" : "BS",
+            "majors" : ["Business Administration, Economics"],
+            "dates" : "August 2004 - May 2008",
+            "url": "http://www.appstate.edu/"
+        }
+    ],
+    "onlineCourses": [
+        {
+            "title": "Front-End Web Development Nanodegree",
+            "school": "Udacity",
+            "dates": 2014,
+            "url": "https://www.udacity.com/course/nd001"
+        },
+        {
+            "title": "Intro to Computer Science",
+            "school": "Udacity",
+            "dates": 2014,
+            "url": "https://www.udacity.com/course/cs101"
+        },
+        {
+            "title": "Intro to HTML and CSS",
+            "school": "Udacity",
+            "dates": 2014,
+            "url": "https://www.udacity.com/course/ud304"
+        },
+        {
+            "title": "JavaScript Basics",
+            "school": "Udacity",
+            "dates": 2014,
+            "url": "https://www.udacity.com/course/ud804"
+        }
+    ],
 
   display : function() {
     $("#education").append(HTMLschoolStart);
@@ -198,38 +207,16 @@ var education = {
     }
     $("#education").append(HTMLonlineClasses);
     $("#education").append(HTMLonlineschoolStart);
-    var formattedonlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[0].title);
-    var formattedonlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[0].school);
-    var formattedonlineTitleSchool = formattedonlineTitle + formattedonlineSchool;
-    $(".online-entry:last").append(formattedonlineTitleSchool);
-    var formattedonlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[0].dates);
-    $(".online-entry:last").append(formattedonlineDates);
-    var formattedonlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[0].url).replace('#', education.onlineCourses[0].url);
-    $(".online-entry:last").append(formattedonlineURL);
-    var formattedonlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[1].title);
-    var formattedonlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[1].school);
-    var formattedonlineTitleSchool = formattedonlineTitle + formattedonlineSchool;
-    $(".online-entry:last").append(formattedonlineTitleSchool);
-    var formattedonlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[1].dates);
-    $(".online-entry:last").append(formattedonlineDates);
-    var formattedonlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[1].url).replace('#', education.onlineCourses[1].url);
-    $(".online-entry:last").append(formattedonlineURL);
-    var formattedonlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[2].title);
-    var formattedonlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[2].school);
-    var formattedonlineTitleSchool = formattedonlineTitle + formattedonlineSchool;
-    $(".online-entry:last").append(formattedonlineTitleSchool);
-    var formattedonlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[2].dates);
-    $(".online-entry:last").append(formattedonlineDates);
-    var formattedonlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[2].url).replace('#', education.onlineCourses[2].url);
-    $(".online-entry:last").append(formattedonlineURL);
-    var formattedonlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[3].title);
-    var formattedonlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[3].school);
-    var formattedonlineTitleSchool = formattedonlineTitle + formattedonlineSchool;
-    $(".online-entry:last").append(formattedonlineTitleSchool);
-    var formattedonlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[3].dates);
-    $(".online-entry:last").append(formattedonlineDates);
-    var formattedonlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[3].url).replace('#', education.onlineCourses[3].url);
-    $(".online-entry:last").append(formattedonlineURL);
+    for (var onlineCourse in education.onlineCourses) {
+        var formattedonlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[onlineCourse].title);
+        var formattedonlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[onlineCourse].school);
+        var formattedonlineTitleSchool = formattedonlineTitle + formattedonlineSchool;
+        $(".online-entry:last").append(formattedonlineTitleSchool);
+        var formattedonlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[onlineCourse].dates);
+        $(".online-entry:last").append(formattedonlineDates);
+        var formattedonlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[onlineCourse].url).replace('#', education.onlineCourses[onlineCourse].url);
+        $(".online-entry:last").append(formattedonlineURL);
+    }
   }
 };
 
@@ -314,7 +301,7 @@ var options = {
 
     //String - A legend template
     legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<segments.length; i++){%><li><span style=\"background-color:<%=segments[i].fillColor%>\"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>"
-}
+};
 
 var ctx = document.getElementById("myChart").getContext("2d");
 var myNewChart = new Chart(ctx).PolarArea(data);
@@ -326,20 +313,20 @@ new Chart(ctx).PolarArea(data, options);
 
 
 $(document).click(function(loc) {
-	var x = loc.pageX;
-	var y = loc.pageY;
+    var x = loc.pageX;
+    var y = loc.pageY;
 
-	logClicks(x,y);
+    logClicks(x,y);
 });
 
 
 function inName() {
 
-	var name_var = bio.name.trim().split(" ");
-	name_var[0] = name_var[0].slice(0,1).toUpperCase() + name_var[0].slice(1).toLowerCase();
-	name_var[1] = name_var[1].toUpperCase();
+    var name_var = bio.name.trim().split(" ");
+    name_var[0] = name_var[0].slice(0,1).toUpperCase() + name_var[0].slice(1).toLowerCase();
+    name_var[1] = name_var[1].toUpperCase();
 
-	return name_var[0] + " " + name_var[1];
+    return name_var[0] + " " + name_var[1];
 }
 
 inName(name);
@@ -352,7 +339,6 @@ education.display();
 $("#mapDiv").append(googleMap);
 
 $("#main").append(internationalizeButton);
-
 
 
 
