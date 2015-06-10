@@ -12,8 +12,8 @@ Cameron Pittman
 These are HTML strings. As part of the course, you'll be using JavaScript functions
 replace the %data% placeholder text you see in them.
 */
-var HTMLheaderName = "<div class='col-xs-12 col-md-8'><h1 id='name'>%data%</h1></div>";
-var HTMLheaderRole = "<div class='col-xs-12 col-md-4'<span id='role'>%data%</span><hr/></div>";
+var HTMLheaderName = "<h1 id='name'>%data%</h1>";
+var HTMLheaderRole = "<span id='role'>%data%</span>";
 
 var HTMLcontactGeneric = "<li class='flex-item'><span class='black-text'>%contact%</span><span class='black-text'>%data%</span></li>";
 var HTMLmobile = "<li class='flex-item'><span class='bold-text'>mobile</span><span class='black-text'>%data%</span></li>";
