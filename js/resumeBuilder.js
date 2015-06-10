@@ -98,39 +98,70 @@ var projects = {
             "title" : "HTML and CSS Portfolio",
             "dates" : "2014",
             "description": "This was my first project in the Udacity Front-End Web Development Nanodegree. The requirement was to develop a responsive website based on a mockup that would display images, descriptions and links to projects I would be completing during the course of the degree.",
-            "url" : "http://aj65461.github.io/portfolio",
             "links": [
                 "https://github.com/aj65461/portfolio",
                 "http://aj65461.github.io/portfolio"
             ],
-            "images": [
-                "images/folio.jpg"
-            ]
+            "images": []
         },
         {
             "title" : "Interactive Resume",
             "dates" : "2014",
             "description": "This was my second project in the Udacity Front-End Web Development Nanodegree. Here I developed an interactive resume application that would read resume content from a JSON file and would dynamically display that content within a provided template. I made use of objects, functions, conditionals, and control structures to compose the content that would display on the resume.",
-            "url" : "http://aj65461.github.io/resume",
-            "images": [
-            "images/resume.jpg"
-            ]
+            "links": [
+                "https://github.com/aj65461/resume",
+                "http://aj65461.github.io/resume"
+            ],
+            "images": []
         },
         {
             "title" : "Classic Arcade Game",
             "dates" : "2015",
             "description": "This was my third project in the Udacity Front-End Web Development Nanodegree. Using the provided game loop engine and my own visual assets, I added a number of entities to the game including the player character, lasers, and health pack to recreate a classic Frogger-style game.",
-            "url" : "http://aj65461.github.io/frontend-nanodegree-arcade-game/",
+            "links": [
+                "https://github.com/aj65461/frontend-nanodegree-arcade-game",
+                "http://aj65461.github.io/frontend-nanodegree-arcade-game/"
+            ],
             "images": [
-            "images/arcade.jpg"
+            //"images/arcade.jpg"
             ]
+        },
+        {
+            "title" : "Mobile Portfolio",
+            "dates" : "2015",
+            "description": "The goal of this project was to analyze the Critical Rendering Path of a provided portfolio page and to make optimizations that would achieve a PageSpeed score of 90 on index.html, ensure a consistent frame rate at 60fps when when scrolling on a page that has a parallax animation in the background, impact content efficiency, and improve time to resize interactive objects on the page to less than 5ms.",
+            "links": [
+                "https://github.com/aj65461/frontend-nanodegree-mobile-portfolio",
+                "http://aj65461.github.io/frontend-nanodegree-mobile-portfolio/"
+            ],
+            "images": []
+        },
+        {
+            "title" : "Neighborhood Map",
+            "dates" : "2015",
+            "description": "The goal of this project was to develop a single page application centered around one of my favorite neighborhoods. The map shows markers for my favorite locations in that neighborhood as well as a list view of those locations that can control the display of information about each place. Third-party APIs — Foursquare and Google Street View Image — were used to asynchronously deliver current information about each location. A search and filter function was implemented to display or hide the markers and list items based on matching letters entered into a search bar above the map. I used the Knockout.js framework to keep the UI updated whenever the data model is changed and to connect the Google map markers to their respective list items. I used the Bootstrap framework to make the overall layout responsive on both larger screens and on mobile screens.",
+            "links": [
+                "https://github.com/aj65461/frontend-nanodegree-neighborhood-map",
+                "http://aj65461.github.io/frontend-nanodegree-neighborhood-map/"
+            ],
+            "images": []
+        },
+        {
+            "title" : "Feed Reader",
+            "dates" : "2015",
+            "description": "In this project I was given a web-based application that read RSS feeds. The goal was to use Jasmine to write test suites that would test the functionality of the application.",
+            "links": [
+                "https://github.com/aj65461/frontend-nanodegree-feedreader",
+                "http://aj65461.github.io/frontend-nanodegree-feedreader/"
+            ],
+            "images": []
         }
     ],
 
   display : function() {
     for (var project in projects.projects) {
       $("#projects").append(HTMLprojectStart);
-      var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title).replace('#', projects.projects[project].url);
+      var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title).replace('#', projects.projects[project].links[1]);
       $(".project-entry:last").append(formattedTitle);
       var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
       $(".project-entry:last").append(formattedDates);
@@ -140,6 +171,8 @@ var projects = {
       // Adding the buttons...
       var formattedCode = HTMLprojectCode.replace("%data%", projects.projects[project].links[0]);
       $(".project-entry:last").append(formattedCode);
+      var formattedDemo = HTMLprojectDemo.replace("%data%", projects.projects[project].links[1]);
+      $(".project-entry:last").append(formattedDemo);
 
       if (projects.projects[project].images.length > 0) {
         for (var image in projects.projects[project].images) {
@@ -160,21 +193,17 @@ var education = {
             "majors" : ["Business Administration, Economics"],
             "dates" : "August 2004 - May 2008",
             "url": "http://www.appstate.edu/"
+        },
+        {
+            "name" : "Udacity",
+            "location" : "",
+            "degree" : "Front-End Web Developer Nanodegree",
+            "majors" : [""],
+            "dates" : "October 2014 - May 2015",
+            "url": "http://www.udacity.com/"
         }
     ],
     "onlineCourses": [
-        {
-            "title": "Front-End Web Development Nanodegree",
-            "school": "Udacity",
-            "dates": 2014,
-            "url": "https://www.udacity.com/course/nd001"
-        },
-        {
-            "title": "Intro to Computer Science",
-            "school": "Udacity",
-            "dates": 2014,
-            "url": "https://www.udacity.com/course/cs101"
-        },
         {
             "title": "Intro to HTML and CSS",
             "school": "Udacity",
@@ -186,25 +215,43 @@ var education = {
             "school": "Udacity",
             "dates": 2014,
             "url": "https://www.udacity.com/course/ud804"
+        },
+        {
+            "title": "Object-Oriented JavaScript",
+            "school": "Udacity",
+            "dates": 2014,
+            "url": "https://www.udacity.com/course/ud015"
+        },
+        {
+            "title": "Website Performance Optimization",
+            "school": "Udacity",
+            "dates": 2014,
+            "url": "https://www.udacity.com/course/ud884"
         }
     ],
 
   display : function() {
     $("#education").append(HTMLschoolStart);
-    var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools[0].name).replace('#', education.schools[0].url);
-    var formattedSchoolDegree = HTMLschoolDegree.replace("%data%", education.schools[0].degree);
+    for (var school in education.schools) {
+        var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools[school].name).replace('#', education.schools[school].url);
+        var formattedSchoolDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
 
-    //Added title to display info like the "work" section.
-    var formattedSchoolTitle = formattedSchoolName + formattedSchoolDegree;
-    $(".education-entry:last").append(formattedSchoolTitle);
-    var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", education.schools[0].location);
-    $(".education-entry:last").append(formattedSchoolLocation);
-    var formattedSchoolDates = HTMLschoolDates.replace("%data%", education.schools[0].dates);
-    $(".education-entry:last").append(formattedSchoolDates);
-    if (education.schools[0].majors.length > 0) {
-      var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[0].majors[0]);
-      $(".education-entry:last").append(formattedMajor);
+        var formattedSchoolTitle = formattedSchoolName + formattedSchoolDegree;
+        $(".education-entry:last").append(formattedSchoolTitle);
+        
+        if (education.schools[school].location.length > 0) {
+            var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
+            $(".education-entry:last").append(formattedSchoolLocation);
+        }
+        var formattedSchoolDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
+        $(".education-entry:last").append(formattedSchoolDates);
+
+        if (education.schools[school].majors.length > 0) {
+          var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[school].majors[0]);
+          $(".education-entry:last").append(formattedMajor);
+        }
     }
+
     $("#education").append(HTMLonlineClasses);
     $("#education").append(HTMLonlineschoolStart);
     for (var onlineCourse in education.onlineCourses) {
