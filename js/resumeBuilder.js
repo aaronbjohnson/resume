@@ -31,7 +31,7 @@ var bio = {
     var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
     $("#topContacts").append(formattedLocation);
     var formattedWelcomeMessage = HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
-    $("#header").append(formattedWelcomeMessage);
+    $("#summary").append(formattedWelcomeMessage);
 //Adding the footer contacts
     //$("#footerContacts").append(formattedMobile);
     $("#footerContacts").append(formattedEmail);
@@ -39,7 +39,7 @@ var bio = {
     $("#footerContacts").append(formattedLinkedin);
     //$("#footerContacts").append(formattedTwitter);
     if (bio.skills.length > 0) {
-      $("#header").append(HTMLskillsStart);
+      $("#skillStart").append(HTMLskillsStart);
       var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
       $("#skills").append(formattedSkill);
       formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
@@ -49,8 +49,8 @@ var bio = {
       formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
       $("#skills").append(formattedSkill);
     }
-    var formattedBioPic = HTMLbioPic.replace("%data%", bio.bioPic);
-    $("#header").prepend(formattedBioPic);
+    //var formattedBioPic = HTMLbioPic.replace("%data%", bio.bioPic);
+    //$("#header").prepend(formattedBioPic);
     $("#header").prepend(formattedRole);
     $("#header").prepend(formattedName);
   }
@@ -98,29 +98,29 @@ var projects = {
 			"title" : "HTML and CSS Portfolio",
 			"dates" : "2014",
 			"description": "This was my first project in the Udacity Front-End Web Development Nanodegree. The requirement was to develop a responsive website based on a mockup that would display images, descriptions and links to projects I would be completing during the course of the degree.",
-      "url" : "http://aj65461.github.io/portfolio",
+            "url" : "http://aj65461.github.io/portfolio",
 			"images": [
 				"images/folio.jpg"
 			]
 		},
-    {
-      "title" : "Interactive Resume",
-      "dates" : "2014",
-      "description": "This was my second project in the Udacity Front-End Web Development Nanodegree. Here I developed an interactive resume application that would read resume content from a JSON file and would dynamically display that content within a provided template. I made use of objects, functions, conditionals, and control structures to compose the content that would display on the resume.",
-      "url" : "http://aj65461.github.io/resume",
-      "images": [
-        "images/resume.jpg"
-      ]
-    },
-    {
-      "title" : "Classic Arcade Game",
-      "dates" : "2015",
-      "description": "This was my third project in the Udacity Front-End Web Development Nanodegree. Using the provided game loop engine and my own visual assets, I added a number of entities to the game including the player character, lasers, and health pack to recreate a classic Frogger-style game.",
-      "url" : "http://aj65461.github.io/frontend-nanodegree-arcade-game/",
-      "images": [
-        "images/arcade.jpg"
-      ]
-    }
+        {
+            "title" : "Interactive Resume",
+            "dates" : "2014",
+            "description": "This was my second project in the Udacity Front-End Web Development Nanodegree. Here I developed an interactive resume application that would read resume content from a JSON file and would dynamically display that content within a provided template. I made use of objects, functions, conditionals, and control structures to compose the content that would display on the resume.",
+            "url" : "http://aj65461.github.io/resume",
+            "images": [
+            "images/resume.jpg"
+            ]
+        },
+        {
+            "title" : "Classic Arcade Game",
+            "dates" : "2015",
+            "description": "This was my third project in the Udacity Front-End Web Development Nanodegree. Using the provided game loop engine and my own visual assets, I added a number of entities to the game including the player character, lasers, and health pack to recreate a classic Frogger-style game.",
+            "url" : "http://aj65461.github.io/frontend-nanodegree-arcade-game/",
+            "images": [
+            "images/arcade.jpg"
+            ]
+        }
 	],
 
   display : function() {
@@ -272,7 +272,7 @@ var data = [
 ];
 
 var options = {
-    
+
     //Boolean - Show a backdrop to the scale label
     scaleShowLabelBackdrop : true,
 
