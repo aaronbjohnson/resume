@@ -292,7 +292,7 @@ var data = [
     },
     {
         value: 40,
-        color: "#949FB1",
+        color: "#999999",
         highlight: "#A8B3C5",
         label: "Grey"
     },

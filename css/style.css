@@ -19,7 +19,7 @@ div {
 
 h1 {
   font-size: 40px;
-  color: #000000;
+  color: #F7464A;
   line-height: 48px;
   display: inline;
 }
@@ -196,6 +196,10 @@ img {
 
 .btn {
     display: inline;
+}
+
+.grey {
+    color: #999999;
 }
 
 span {
