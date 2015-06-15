@@ -111,12 +111,12 @@ a {
 }
 
 .orange {
-  background: url('../images/headerbackground.jpg'); 
+  background-color: #F7464A; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  color: #000000;
+  color: #ffffff;
 }
 /*Add this to separate text since they're the same color now.*/
 .bold-text {
@@ -198,7 +198,7 @@ img {
     display: inline;
 }
 
-.grey {
+.gray2 {
     color: #999999;
 }
 
