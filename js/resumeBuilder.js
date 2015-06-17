@@ -363,7 +363,7 @@ new Chart(ctx).PolarArea(data, options);
 // Radar Chart Here:
 
 var data = {
-    labels: ["Painting/Drawing", "Playing Guitar", "Reading", "Gaming"],
+    labels: ["Painting/Drawing", "Playing Guitar", "Reading", "Gaming", "Golfing"],
     datasets: [
         {
             label: "Hobbies",
@@ -373,7 +373,7 @@ var data = {
             pointStrokeColor: "#fff",
             pointHighlightFill: "#fff",
             pointHighlightStroke: "rgba(220,220,220,1)",
-            data: [90, 60, 80, 25]
+            data: [90, 60, 80, 25, 10]
         }
     ]
 };
