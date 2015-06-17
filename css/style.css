@@ -93,10 +93,10 @@ a {
 }
 
 .welcome-message {
-  font-style: italic;
-  font-size: 18px;
-  color: #000000;
-  line-height: 28px;
+    font-size: 14px;
+    color: #333333;
+    line-height: 21px;
+    display: block;
 }
 
 #skillsH3 {
@@ -163,9 +163,6 @@ a {
   font-size: small;
 }
 
-.center-content {
-  padding: 5%;
-}
 
 ul {
   list-style-type: none;
