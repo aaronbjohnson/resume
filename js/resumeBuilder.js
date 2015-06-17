@@ -60,10 +60,10 @@ var work = {
     "jobs": [
         {
             "employer" : "Patent Illustration Studios",
-            "title" : "Partner, Drafting Manager",
+            "title" : "Member, Drafting Manager",
             "location" : "Jonesville, NC",
             "dates" : "October 2013 - Present",
-            "description" : "Coordinated with clients to provide patent applicants with the necessary illustrations to show design and functionality of intellectual property.",
+            "description" : "Employing the most up-to-date technology to establish a more streamlined and efficient patent illustration process, leading to faster turnaround times without sacrificing quality. Utilizing an algorithmic approach to planning and executing patent illustration packages. Researching and learning new technologies and software in order to further increase speed, adaptability, and accuracy of the patent illustration process.",
       "url" : "http://www.patentillustrationstudios.com/"
         },
         {
@@ -71,7 +71,7 @@ var work = {
             "title" : "Illustrator",
             "location" : "Charlotte, NC",
             "dates" : "December 2008 - October 2013",
-            "description" : "Coordinated with clients to provide patent applicants with the necessary illustrations to show design and functionality of intellectual property."
+            "description" : "Produced and delivered clear and concise drawing packages that included multiple methodologies for a wide range of inventions. Responsible for end-to-end case management. Worked in a team environment to develop long-lasting client relationships by maintaining the highest level of service, quality, and accuracy while meeting tight deadlines."
         }
     ],
 
@@ -435,7 +435,7 @@ var options = {
 
 }
 
-var ctx = document.getElementById("myChart").getContext("2d");
+var ctx = document.getElementById("hobbyChart").getContext("2d");
 
 var myRadarChart = new Chart(ctx).Radar(data, options);
 
