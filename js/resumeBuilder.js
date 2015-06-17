@@ -28,8 +28,8 @@ var bio = {
     //$("#topContacts").append(formattedTwitter);
     var formattedLinkedin = HTMLlinkedin.replace("%data%", bio.contacts.linkedin);
     $("#topContacts").append(formattedLinkedin);
-    var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
-    $("#topContacts").append(formattedLocation);
+    //var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
+    //$("#topContacts").append(formattedLocation);
     var formattedWelcomeMessage = HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
     $("#summary").append(formattedWelcomeMessage);
 //Adding the footer contacts
