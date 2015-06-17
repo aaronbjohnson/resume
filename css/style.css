@@ -92,6 +92,22 @@ a {
   font-weight: bold;
 }
 
+a:visited,
+a:active,
+a:link {
+    text-decoration: none;
+    color: #000000;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #46BFBD;
+}
+
+a.inText {
+    display: inline;
+}
+
 .welcome-message {
     font-size: 14px;
     color: #333333;

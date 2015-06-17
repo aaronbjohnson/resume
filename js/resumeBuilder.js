@@ -1,3 +1,5 @@
+var website = '<a class="inText" href="http://aaronjohnsonartist.com" target="_blank">website</a>';
+
 var bio = {
     "name": "Aaron Johnson",
     "role": "WEB DEVELOPER",
@@ -9,7 +11,7 @@ var bio = {
         "linkedin": "abrittjohnson",
         "location": "Jonesville, NC"
     },
-    "welcomeMessage": "I became fascinated with web development while creating my own website using Wordpress. Wanting to build my skills around a solid foundation of best practices and up-to-date technology, I enrolled in the Udacity Front-End Web Developer Nanodegree program. Having graduated, I am excited about applying these skills to bring value to the world of web development.",
+    "welcomeMessage": "I became fascinated with web development while creating my own " + website + " using Wordpress. Wanting to build my skills around a solid foundation of best practices and up-to-date technology, I enrolled in the Udacity Front-End Web Developer Nanodegree program. Having graduated, I am excited about applying these skills to bring value to the world of web development.",
     "skills": [
         "HTML", "CSS", "JavaScript", "Python"
     ],
