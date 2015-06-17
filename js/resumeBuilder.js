@@ -257,7 +257,7 @@ var education = {
     $("#education").append(HTMLonlineClasses);
     $("#education").append(HTMLonlineschoolStart);
     for (var onlineCourse in education.onlineCourses) {
-        var formattedonlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[onlineCourse].title);
+        var formattedonlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[onlineCourse].title).replace('#', education.onlineCourses[onlineCourse].url);
         var formattedonlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[onlineCourse].school);
         var formattedonlineTitleSchool = formattedonlineTitle + formattedonlineSchool;
         $(".online-entry:last").append(formattedonlineTitleSchool);
@@ -364,7 +364,7 @@ new Chart(ctx).PolarArea(data, options);
 
 // Radar Chart Here:
 
-var data = {
+var hobbyData = {
     labels: ["Painting/Drawing", "Playing Guitar", "Reading", "Gaming", "Golfing"],
     datasets: [
         {
@@ -372,7 +372,7 @@ var data = {
             fillColor: "rgba(90,211,209,0.2)",
             strokeColor: "#46BFBD",
             pointColor: "rgba(220,220,220,1)",
-            pointStrokeColor: "#fff",
+            pointStrokeColor: "#46BFBD",
             pointHighlightFill: "#fff",
             pointHighlightStroke: "rgba(220,220,220,1)",
             data: [90, 60, 80, 25, 10]
@@ -380,7 +380,7 @@ var data = {
     ]
 };
 
-var options = {
+var hobbyOptions = {
     //Boolean - Whether to show lines for each scale point
     scaleShowLine : true,
 
@@ -439,7 +439,7 @@ var options = {
 
 var ctx = document.getElementById("hobbyChart").getContext("2d");
 
-var myRadarChart = new Chart(ctx).Radar(data, options);
+var myRadarChart = new Chart(ctx).Radar(hobbyData, hobbyOptions);
 
 
 
