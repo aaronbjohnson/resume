@@ -35,13 +35,13 @@ var bio = {
             "label": "Bootstrap",
             "color": "#999999",
             "highlight": "#A8B3C5",
-            "value": 7
+            "value": 8
         },
         {
             "label": "Python",
             "color": "#4D5360",
             "highlight": "#616774",
-            "value": 6
+            "value": 5
         }
     ],
     "hobbies": {
@@ -72,13 +72,15 @@ var bio = {
         $("#footerContacts").append(formattedGithub);
         $("#footerContacts").append(formattedLinkedin);
         //$("#footerContacts").append(formattedTwitter);
+        /*
         if (bio.skills.length > 0) {
             $("#skillStart").append(HTMLskillsStart);
             for (var skill in bio.skills) {
-                var formattedSkill = HTMLskills.replace("%data%", bio.skills[skill]);
+                var formattedSkill = HTMLskills.replace("%data%", bio.skills[skill].label);
                 $("#skills").append(formattedSkill);
             }
         }
+        */
         //var formattedBioPic = HTMLbioPic.replace("%data%", bio.bioPic);
         //$("#header").prepend(formattedBioPic);
         $("#header").prepend(formattedRole);
@@ -308,8 +310,6 @@ function Skill(value, color, highlight, label) {
     this.label = label;
 }
 
-
-
 /**
  * Adding the chart.js stuff here
  */
@@ -320,7 +320,6 @@ for (var skill in bio.skills) {
     skillData.push(chartEntry);
     console.log(chartEntry);
 }
-
 
 
 var skillOptions = {
