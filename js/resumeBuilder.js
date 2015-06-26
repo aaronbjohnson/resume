@@ -13,7 +13,36 @@ var bio = {
     },
     "welcomeMessage": "I became fascinated with web development while creating my own " + website + " using Wordpress. Wanting to build my skills around a solid foundation of best practices and up-to-date technology, I enrolled in the Udacity Front-End Web Developer Nanodegree program. Having graduated, I am excited about applying these skills to bring value to the world of web development.",
     "skills": [
-        "HTML", "CSS", "JavaScript", "Bootstrap", "Python"
+        {
+            "label": "HTML",
+            "color": "#F7464A",
+            "highlight": "#FF5A5E",
+            "value": 10
+        },
+        {
+            "label": "CSS",
+            "color": "#46BFBD",
+            "highlight": "#5AD3D1",
+            "value": 10
+        },
+        {
+            "label": "JavaScript",
+            "color": "#FDB45C",
+            "highlight": "#FFC870",
+            "value": 7
+        },
+        {
+            "label": "Bootstrap",
+            "color": "#999999",
+            "highlight": "#A8B3C5",
+            "value": 7
+        },
+        {
+            "label": "Python",
+            "color": "#4D5360",
+            "highlight": "#616774",
+            "value": 6
+        }
     ],
     "hobbies": {
         "Illustration": "90",
@@ -65,7 +94,7 @@ var work = {
             "location" : "Jonesville, NC",
             "dates" : "October 2013 - Present",
             "description" : "Employing the most up-to-date technology to establish a more streamlined and efficient patent illustration process, leading to faster turnaround times without sacrificing quality. Utilizing an algorithmic approach to planning and executing patent illustration packages. Researching and learning new technologies and software in order to further increase speed, adaptability, and accuracy of the patent illustration process.",
-      "url" : "http://www.patentillustrationstudios.com/"
+            "url" : "http://www.patentillustrationstudios.com/"
         },
         {
             "employer" : "Global Patent Graphics",
@@ -269,42 +298,28 @@ var education = {
 };
 
 /**
+ * Creating skill constructor function
+ */
+
+function Skill(value, color, highlight, label) {
+    this.value = value;
+    this.color = color;
+    this.highlight = highlight;
+    this.label = label;
+}
+
+
+
+/**
  * Adding the chart.js stuff here
  */
 
-var skillData = [
-    {
-        value: 10,
-        color:"#F7464A",
-        highlight: "#FF5A5E",
-        label: "Red"
-    },
-    {
-        value: 5,
-        color: "#46BFBD",
-        highlight: "#5AD3D1",
-        label: "Green"
-    },
-    {
-        value: 1,
-        color: "#FDB45C",
-        highlight: "#FFC870",
-        label: "Yellow"
-    },
-    {
-        value: 4,
-        color: "#999999",
-        highlight: "#A8B3C5",
-        label: "Grey"
-    },
-    {
-        value: 2,
-        color: "#4D5360",
-        highlight: "#616774",
-        label: "Dark Grey"
-    }
-
-];
+var skillData = [];
+for (var skill in bio.skills) {
+    var chartEntry = new Skill(bio.skills[skill].value, bio.skills[skill].color, bio.skills[skill].highlight, bio.skills[skill].label);
+    skillData.push(chartEntry);
+    console.log(chartEntry);
+}
 
 
 
@@ -361,6 +376,7 @@ new Chart(ctxSkill).PolarArea(skillData, skillOptions);
 
 
 // Radar Chart Here:
+
 
 var hobbyData = {
     labels: ["Painting/Drawing", "Playing Guitar", "Reading", "Gaming", "Golfing"],
