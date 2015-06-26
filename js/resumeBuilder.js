@@ -9,7 +9,12 @@ var bio = {
         "github": "aj65461",
         /*"twitter": "@WhereTrumpAt",*/
         "linkedin": "abrittjohnson",
-        "location": "Jonesville, NC"
+        "location": "Jonesville, NC",
+        "otherPlacesLived": [
+            {
+                "location": "Brooklyn, NY"
+            }
+        ]
     },
     "welcomeMessage": "I became fascinated with web development while creating my own " + website + " using Wordpress. Wanting to build my skills around a solid foundation of best practices and up-to-date technology, I enrolled in the Udacity Front-End Web Developer Nanodegree program. Having graduated, I am excited about applying these skills to bring value to the world of web development.",
     "skills": [
