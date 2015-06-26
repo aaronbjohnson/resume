@@ -13,8 +13,11 @@ var bio = {
     },
     "welcomeMessage": "I became fascinated with web development while creating my own " + website + " using Wordpress. Wanting to build my skills around a solid foundation of best practices and up-to-date technology, I enrolled in the Udacity Front-End Web Developer Nanodegree program. Having graduated, I am excited about applying these skills to bring value to the world of web development.",
     "skills": [
-        "HTML", "CSS", "JavaScript", "Python"
+        "HTML", "CSS", "JavaScript", "Bootstrap", "Python"
     ],
+    "hobbies": {
+        "Illustration": "90",
+    },
     "bioPic": "images/me.jpg",
 
     display : function () {
@@ -42,14 +45,10 @@ var bio = {
         //$("#footerContacts").append(formattedTwitter);
         if (bio.skills.length > 0) {
             $("#skillStart").append(HTMLskillsStart);
-            var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
-            $("#skills").append(formattedSkill);
-            formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
-            $("#skills").append(formattedSkill);
-            formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
-            $("#skills").append(formattedSkill);
-            formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
-            $("#skills").append(formattedSkill);
+            for (var skill in bio.skills) {
+                var formattedSkill = HTMLskills.replace("%data%", bio.skills[skill]);
+                $("#skills").append(formattedSkill);
+            }
         }
         //var formattedBioPic = HTMLbioPic.replace("%data%", bio.bioPic);
         //$("#header").prepend(formattedBioPic);
@@ -275,31 +274,31 @@ var education = {
 
 var skillData = [
     {
-        value: 300,
+        value: 10,
         color:"#F7464A",
         highlight: "#FF5A5E",
         label: "Red"
     },
     {
-        value: 50,
+        value: 5,
         color: "#46BFBD",
         highlight: "#5AD3D1",
         label: "Green"
     },
     {
-        value: 100,
+        value: 1,
         color: "#FDB45C",
         highlight: "#FFC870",
         label: "Yellow"
     },
     {
-        value: 40,
+        value: 4,
         color: "#999999",
         highlight: "#A8B3C5",
         label: "Grey"
     },
     {
-        value: 120,
+        value: 2,
         color: "#4D5360",
         highlight: "#616774",
         label: "Dark Grey"
@@ -339,7 +338,7 @@ var skillOptions = {
     segmentStrokeWidth : 2,
 
     //Number - Amount of animation steps
-    animationSteps : 100,
+    animationSteps : 10,
 
     //String - Animation easing effect.
     animationEasing : "easeOutBounce",
