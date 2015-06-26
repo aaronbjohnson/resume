@@ -17,13 +17,13 @@ var bio = {
             "label": "HTML",
             "color": "#F7464A",
             "highlight": "#FF5A5E",
-            "value": 10
+            "value": 9
         },
         {
             "label": "CSS",
             "color": "#46BFBD",
             "highlight": "#5AD3D1",
-            "value": 10
+            "value": 9
         },
         {
             "label": "JavaScript",
@@ -38,15 +38,52 @@ var bio = {
             "value": 8
         },
         {
+            "label": "jQuery",
+            "color": "#E7B892",
+            "highlight": "#FFDBBE",
+            "value": 6
+        },
+        {
+            "label": "Photoshop",
+            "color": "#40CA39",
+            "highlight": "#70E46A",
+            "value": 10
+        },
+        {
+            "label": "Illustrator",
+            "color": "#055C59",
+            "highlight": "#018E89",
+            "value": 10
+        },
+        {
             "label": "Python",
-            "color": "#4D5360",
-            "highlight": "#616774",
-            "value": 5
+            "color": "#974708",
+            "highlight": "#EB6902",
+            "value": 4
         }
     ],
-    "hobbies": {
-        "Illustration": "90",
-    },
+    "hobbies": [
+        {
+            "label": "Illustration",
+            "value": 90
+        },
+        {
+            "label": "Playing Guitar",
+            "value": 60
+        },
+        {
+            "label": "Reading",
+            "value": 80
+        },
+        {
+            "label": "Gaming",
+            "value": 25
+        },
+        {
+            "label": "Golfing",
+            "value": 15
+        }
+    ],
     "bioPic": "images/me.jpg",
 
     display : function () {
@@ -318,7 +355,6 @@ var skillData = [];
 for (var skill in bio.skills) {
     var chartEntry = new Skill(bio.skills[skill].value, bio.skills[skill].color, bio.skills[skill].highlight, bio.skills[skill].label);
     skillData.push(chartEntry);
-    console.log(chartEntry);
 }
 
 
@@ -376,9 +412,12 @@ new Chart(ctxSkill).PolarArea(skillData, skillOptions);
 
 // Radar Chart Here:
 
+for (var hobby in bio.hobbies) {
+
+}
 
 var hobbyData = {
-    labels: ["Painting/Drawing", "Playing Guitar", "Reading", "Gaming", "Golfing"],
+    labels: [],
     datasets: [
         {
             label: "Hobbies",
@@ -388,10 +427,15 @@ var hobbyData = {
             pointStrokeColor: "#46BFBD",
             pointHighlightFill: "#fff",
             pointHighlightStroke: "rgba(220,220,220,1)",
-            data: [90, 60, 80, 25, 10]
+            data: []
         }
     ]
 };
+
+for (var hobby in bio.hobbies) {
+    hobbyData.labels.push(bio.hobbies[hobby].label);
+    hobbyData.datasets[0].data.push(bio.hobbies[hobby].value);
+}
 
 var hobbyOptions = {
     //Boolean - Whether to show lines for each scale point
