@@ -272,8 +272,8 @@ var education = {
 /**
  * Adding the chart.js stuff here
  */
-/*
-var data = [
+
+var skillData = [
     {
         value: 300,
         color:"#F7464A",
@@ -309,7 +309,7 @@ var data = [
 
 
 
-var options = {
+var skillOptions = {
 
     //Boolean - Show a backdrop to the scale label
     scaleShowLabelBackdrop : true,
@@ -354,13 +354,12 @@ var options = {
     legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<segments.length; i++){%><li><span style=\"background-color:<%=segments[i].fillColor%>\"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>"
 };
 
-var ctx = document.getElementById("myChart").getContext("2d");
-var myNewChart = new Chart(ctx).PolarArea(data);
+var ctxSkill = document.getElementById("skillsChart").getContext("2d");
+var mySkillChart = new Chart(ctxSkill).PolarArea(skillData);
 
 // Draw a polar area chart
-new Chart(ctx).PolarArea(data, options);
+new Chart(ctxSkill).PolarArea(skillData, skillOptions);
 
-*/
 
 // Radar Chart Here:
 
@@ -437,9 +436,9 @@ var hobbyOptions = {
 
 };
 
-var ctx = document.getElementById("hobbyChart").getContext("2d");
+var ctxHobby = document.getElementById("hobbyChart").getContext("2d");
 
-var myRadarChart = new Chart(ctx).Radar(hobbyData, hobbyOptions);
+var myRadarChart = new Chart(ctxHobby).Radar(hobbyData, hobbyOptions);
 
 
 
