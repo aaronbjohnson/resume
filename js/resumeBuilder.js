@@ -417,10 +417,6 @@ new Chart(ctxSkill).PolarArea(skillData, skillOptions);
 
 // Radar Chart Here:
 
-for (var hobby in bio.hobbies) {
-
-}
-
 var hobbyData = {
     labels: [],
     datasets: [
