@@ -2,7 +2,7 @@ Interactive Resume
 ===========================================
 To view this site, simply click on the following link:
 ------------------------------------------------------
-http://aj65461.github.io/resume/
+http://aaronbjohnson.github.io/resume/
 
 ### Project Description
 
